@@ -16,7 +16,7 @@ variable "vpc_id" {
 }
 
 variable "public_subnet" {
-  description = "ID of the public subnet to place the NAT instance"
+  description = "ID of the public subnet to place the NAT instance."
   type        = string
 }
 
