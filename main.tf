@@ -126,6 +126,9 @@ resource "aws_autoscaling_group" "main" {
   max_size            = 1
   vpc_zone_identifier = [var.public_subnet]
 
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
   mixed_instances_policy {
     instances_distribution {
       on_demand_base_capacity                  = var.use_spot_instance ? 0 : 1
